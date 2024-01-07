@@ -573,11 +573,9 @@ function findLongestIncreasingSubsequence(nums) {
     if (prev < curr) {
       count += 1;
       maxCount = count > maxCount ? count : maxCount;
-      console.log(maxCount);
     } else {
       count = 1;
     }
-    console.log(curr);
     return curr;
   });
   return maxCount;
@@ -696,7 +694,6 @@ function swapHeadAndTail(arr) {
   const halfLength = Math.floor(arr.length / 2);
   const head = arr.splice(0, halfLength);
   const tail = arr.splice(arr.length - halfLength, halfLength);
-  console.log(tail);
   return tail.concat(arr).concat(head);
 }
 
